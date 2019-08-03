@@ -1,844 +1,0 @@
-Dependencies for Project 'stmw5500', Target 'c8t6w5500': (DO NOT MODIFY !)
-F (.\source\main.c)(0x5D443A0A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/main.o -MD)
-I (source\main.h)(0x5D43B45B)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5C41B71A)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (source\FatFs\diskio.h)(0x5D414BA9)
-I (source\PlatformHandler\rccHandler.h)(0x5D3EC737)
-I (source\PlatformHandler\uartHandler.h)(0x5D400D49)
-I (source\PlatformHandler\stm32f10x_it.h)(0x5D3EB9F4)
-I (source\PlatformHandler\timerHandler.h)(0x5D43A9DF)
-I (source\util\boardutil.h)(0x5D42DF55)
-I (source\PlatformHandler\delay.h)(0x5D3ACB93)
-I (source\PlatformHandler\spiconfig.h)(0x5D401B8C)
-I (source\PlatformHandler\w5500init.h)(0x5D43A8D4)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (source\ethernet\socketdefines.h)(0x5D43B3E5)
-I (source\PlatformHandler\stm32f1fatfs.h)(0x5D40E740)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5C41B71A)
-I (source\ethernet\ntpserver.h)(0x5D439A2A)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\SNMP\snmp.h)(0x5D43A610)
-I (source\ethernet\httpServer\eeprom_stm.h)(0x5CD07875)
-I (source\ethernet\httpServer\httpServer.h)(0x5D44EC69)
-I (source\ethernet\httpServer\webpage.h)(0x5D394BE6)
-I (source\ethernet\SNTP\sntp.h)(0x5D4406A7)
-F (.\source\PlatformHandler\rccHandler.c)(0x5D43A0D6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/rcchandler.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\PlatformHandler\rccHandler.h)(0x5D3EC737)
-F (.\source\PlatformHandler\stm32f10x_it.c)(0x5D42B597)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_it.o -MD)
-I (source\PlatformHandler\stm32f10x_it.h)(0x5D3EB9F4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-F (.\source\PlatformHandler\uartHandler.c)(0x5D400D5D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/uarthandler.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (source\PlatformHandler\uartHandler.h)(0x5D400D49)
-F (.\source\PlatformHandler\timerHandler.c)(0x5D43BBED)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/timerhandler.o -MD)
-I (source\PlatformHandler\timerHandler.h)(0x5D43A9DF)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (C:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5C41B71A)
-I (source\util\boardutil.h)(0x5D42DF55)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (source\FatFs\diskio.h)(0x5D414BA9)
-F (.\source\PlatformHandler\delay.c)(0x5D3ACB93)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/delay.o -MD)
-I (source\PlatformHandler\delay.h)(0x5D3ACB93)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (.\source\PlatformHandler\spiconfig.c)(0x5D43A105)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/spiconfig.o -MD)
-I (source\PlatformHandler\spiconfig.h)(0x5D401B8C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (.\source\PlatformHandler\w5500init.c)(0x5D42EC4E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/w5500init.o -MD)
-I (source\PlatformHandler\w5500init.h)(0x5D43A8D4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (source\PlatformHandler\delay.h)(0x5D3ACB93)
-I (source\PlatformHandler\spiconfig.h)(0x5D401B8C)
-I (source\ethernet\socketdefines.h)(0x5D43B3E5)
-F (.\source\ethernet\wizchip_conf.c)(0x5CF5ED93)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/wizchip_conf.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x5C41B71A)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-F (.\source\ethernet\W5500\w5500.c)(0x5CAE8A31)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/w5500.o -MD)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-F (.\source\ethernet\socket.c)(0x5D3ACA9B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/socket.o -MD)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-F (.\source\PlatformHandler\stm32f1fatfs.c)(0x5D443518)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f1fatfs.o -MD)
-I (source\PlatformHandler\stm32f1fatfs.h)(0x5D40E740)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (source\FatFs\diskio.h)(0x5D414BA9)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-F (.\source\ethernet\ntpserver.c)(0x5D43A78D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/ntpserver.o -MD)
-I (source\ethernet\ntpserver.h)(0x5D439A2A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\socketdefines.h)(0x5D43B3E5)
-F (.\source\ethernet\SNMP\snmp.c)(0x5D43A9F5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/snmp.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5C41B71A)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (source\ethernet\SNMP\snmp.h)(0x5D43A610)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\ethernet\SNMP\snmp_custom.h)(0x5CAE8A31)
-I (source\ethernet\socketdefines.h)(0x5D43B3E5)
-I (source\PlatformHandler\timerHandler.h)(0x5D43A9DF)
-I (source\util\boardutil.h)(0x5D42DF55)
-F (.\source\ethernet\SNMP\snmp_custom.c)(0x5D43A44A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/snmp_custom.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\ethernet\SNMP\snmp_custom.h)(0x5CAE8A31)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5C41B71A)
-I (source\ethernet\SNMP\snmp.h)(0x5D43A610)
-F (.\source\ethernet\SNTP\sntp.c)(0x5D442F07)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/sntp.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\time.h)(0x5C41B71A)
-I (source\ethernet\SNTP\sntp.h)(0x5D4406A7)
-I (source\ethernet\socketdefines.h)(0x5D43B3E5)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-F (.\source\FatFs\mmcstm32.c)(0x5D43A2BC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/mmcstm32.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\PlatformHandler\spiconfig.h)(0x5D401B8C)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (source\FatFs\diskio.h)(0x5D414BA9)
-F (.\source\FatFs\ff.c)(0x5BC35ED8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/ff.o -MD)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\FatFs\diskio.h)(0x5D414BA9)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x5C41B71A)
-F (.\source\FatFs\ffsystem.c)(0x5BC35ED8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/ffsystem.o -MD)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-F (.\source\FatFs\ffunicode.c)(0x5BC35ED8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/ffunicode.o -MD)
-I (source\FatFs\ff.h)(0x5BC35ED8)
-I (source\FatFs\ffconf.h)(0x5D413C52)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-F (.\source\ethernet\httpServer\ConfigData.c)(0x5D394EEA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/configdata.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (source\ethernet\httpServer\ConfigData.h)(0x5D394E42)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-F (.\source\ethernet\httpServer\httpParser.c)(0x5D37CF03)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/httpparser.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (source\ethernet\httpServer\httpParser.h)(0x5D380D6A)
-F (.\source\ethernet\httpServer\httpServer.c)(0x5D44EDD3)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/httpserver.o -MD)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5C41B71A)
-I (source\ethernet\socket.h)(0x5CAE8A31)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (source\ethernet\httpServer\httpServer.h)(0x5D44EC69)
-I (source\ethernet\httpServer\httpParser.h)(0x5D380D6A)
-I (source\ethernet\httpServer\httpUtil.h)(0x5CAE8A31)
-F (.\source\ethernet\httpServer\httpUtil.c)(0x5D43AD58)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/httputil.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (source\ethernet\wizchip_conf.h)(0x5CEF8766)
-I (source\ethernet\W5500\w5500.h)(0x5CAE8A31)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5C41B71A)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x5C41B71A)
-I (source\ethernet\httpServer\httpUtil.h)(0x5CAE8A31)
-I (source\ethernet\httpServer\httpServer.h)(0x5D44EC69)
-I (source\ethernet\httpServer\httpParser.h)(0x5D380D6A)
-I (source\ethernet\httpServer\ConfigData.h)(0x5D394E42)
-I (source\ethernet\httpServer\eeprom_stm.h)(0x5CD07875)
-F (.\source\ethernet\httpServer\eeprom_stm.c)(0x5CD07875)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/eeprom_stm.o -MD)
-I (source\ethernet\httpServer\eeprom_stm.h)(0x5CD07875)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\misc.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/misc.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_dma.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_dma.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_exti.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_exti.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_flash.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_flash.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_gpio.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_gpio.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_i2c.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_i2c.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_iwdg.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_iwdg.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_rcc.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_rcc.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_spi.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_spi.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_tim.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_tim.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\src\stm32f10x_usart.c)(0x52FABE10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/stm32f10x_usart.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.c)(0x571FC9FA)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/gpio_stm32f10x.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver\GPIO_STM32F10x.h)(0x5617FC0E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)
-F (RTE\Device\STM32F103C8\RTE_Device.h)(0x5928B296)()
-F (RTE\Device\STM32F103C8\startup_stm32f10x_md.s)(0x58260B5C)(--cpu Cortex-M3 -g --pd "__MICROLIB SETA 1"-I.\RTE\Device\STM32F103C8-I.\RTE\_c8t6w5500-IC:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include-IC:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-IC:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver--pd "__UVISION_VERSION SETA 527"--pd "_RTE_ SETA 1"--pd "STM32F10X_MD SETA 1"--list .\listings\startup_stm32f10x_md.lst--xref -o .\objects\startup_stm32f10x_md.o--depend .\objects\startup_stm32f10x_md.d)
-F (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)()
-F (RTE\Device\STM32F103C8\system_stm32f10x.c)(0x58260B5C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-3 -Oz -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ./source -I ./source/util -I ./source/PlatformHandler -I ./source/ethernet -I ./source/ethernet/W5500 -I ./source/FatFs -I ./source/ethernet/SNMP -I ./source/ethernet/httpServer -I ./source/ethernet/SNTP-I./RTE/Device/STM32F103C8-I./RTE/_c8t6w5500-IC:/Users/ngoqu/AppData/Local/Arm/Packs/ARM/CMSIS/5.5.1/CMSIS/Core/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/Include-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/Device/StdPeriph_Driver/inc-IC:/Users/ngoqu/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.3.0/RTE_Driver-D__UVISION_VERSION="527" -D_RTE_ -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD-o ./objects/system_stm32f10x.o -MD)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x58260B5C)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\core_cm3.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5C41B71A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_version.h)(0x5B97E734)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_compiler.h)(0x5C9020C4)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include\cmsis_armclang.h)(0x5C9020C4)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x5A8F8868)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x5C49901A)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\system_stm32f10x.h)(0x58260B5C)
-I (RTE\Device\STM32F103C8\stm32f10x_conf.h)(0x52FAC0C0)
-I (RTE\_c8t6w5500\RTE_Components.h)(0x5D3E9FB6)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_dma.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_exti.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_flash.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_gpio.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_i2c.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_iwdg.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_rcc.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_spi.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_tim.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52FABE10)
-I (C:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52FABE10)

@@ -15,6 +15,7 @@ SPI Flash W25Q16DV: SPI1, CS = PC13
 NTP Time Server
 SNMPv1 Agent, Trap
 webpages
+//Sau khi nap code, neu ko restart thi co nhieu loi say ra, NTP, SNTP
 **/
 
 #include "main.h"

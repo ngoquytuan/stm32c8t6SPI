@@ -67,27 +67,6 @@ void default_wdt_reset(void) {;}
 void (*HTTPServer_ReStart)(void) = default_mcu_reset;
 void (*HTTPServer_WDT_Reset)(void) = default_wdt_reset;
 
-#define NO_CUSTOM_COMMAND 0
-	// return value - 	0: Failed (no custom command)
-//					1: Success
-//					2: Failed (custom command ok, but process error - e.g., I/O control failed)
-uint8_t custom_command_handler(
-	uint8_t * buf				/**< custom command: pointer to be parsed */
-	)
-{
-	uint8_t ret = NO_CUSTOM_COMMAND;
-
-#ifdef _CUSTOM_COMMAND_DEBUG_
-			//printf("[CWD] ");
-#endif
-
-	// if the command process succeed, ret = COMMAND_SUCCESS;
-	// if the command received but process failed, ret = COMMAND_ERROR;
-	// if the http request is not custom command, ret = NO_CUSTOM_COMMAND;
-
-	return ret;
-}
-
 void httpServer_Sockinit(uint8_t cnt, uint8_t * socklist)
 {
 	uint8_t i;
@@ -139,7 +118,6 @@ void httpServer_run(uint8_t seqnum)
 {
 	uint8_t s;	// socket number
 	uint16_t len;
-	uint8_t ret = 0;
 
 #ifdef _HTTPSERVER_DEBUG_
 	uint8_t destip[4] = {0, };
@@ -167,28 +145,14 @@ void httpServer_run(uint8_t seqnum)
 			switch(HTTPSock_Status[seqnum].sock_status)
 			{
 
-				case STATE_HTTP_IDLE :
-					if ((len = getSn_RX_RSR(s)) > 0)
+				case STATE_HTTP_IDLE :// Nhan dc ban tin HTTP va chua lam gi ca
+					if ((len = getSn_RX_RSR(s)) > 0)//Kiem tra buffer roi trich xuat
 					{
 						if (len > DATA_BUF_SIZE) len = DATA_BUF_SIZE;
-						len = recv(s, (uint8_t *)http_request, len);
 						// ## 20150828, Eric / Bongjun Hur added
 						if ((len = recv(s, (uint8_t *)http_request, len)) < 0) break;	// Exception handler
-						////////////////////////////////////////////////////////////////////////////////
-						// Todo; User defined custom command handler (userHandler.c)
-						ret = custom_command_handler((uint8_t *)http_request);
-						////////////////////////////////////////////////////////////////////////////////
-						
-						if(ret > 0) // Custom command handler
-						{
-							// Todo: Users can change this parts for custom function added
-							//if(ret == COMMAND_SUCCESS)		send(s, (uint8_t *)"CMDOK", 5);
-							//else if(ret == COMMAND_ERROR)	send(s, (uint8_t *)"CMDERROR", 8);
+						//len = recv(s, (uint8_t *)http_request, len);
 
-							HTTPSock_Status[seqnum].sock_status = STATE_HTTP_RES_DONE;
-						}
-						else // HTTP process handler
-						{
 						*(((uint8_t *)http_request) + len) = '\0';// End of string (EOS) marker
 						//Phan loai HTTP GET, POST HEAD...
 						parse_http_request(parsed_http_request, (uint8_t *)http_request);
@@ -205,11 +169,9 @@ void httpServer_run(uint8_t seqnum)
 						// HTTP 'response' handler; includes send_http_response_header / body function
 						http_process_handler(s, parsed_http_request);
 
-
 						if(HTTPSock_Status[seqnum].file_len > 0) HTTPSock_Status[seqnum].sock_status = STATE_HTTP_RES_INPROC;
 						else HTTPSock_Status[seqnum].sock_status = STATE_HTTP_RES_DONE; // Send the 'HTTP response' end
 					}
-				}
 					break;
 
 				case STATE_HTTP_RES_INPROC :
@@ -251,7 +213,13 @@ void httpServer_run(uint8_t seqnum)
 #ifdef _HTTPSERVER_DEBUG_
 		printf("> HTTPSocket[%d] : ClOSE_WAIT\r\n", s);	// if a peer requests to close the current connection
 #endif
-			disconnect(s);
+		
+		// Socket file info structure re-initialize
+		HTTPSock_Status[seqnum].file_len = 0;
+		HTTPSock_Status[seqnum].file_offset = 0;
+		HTTPSock_Status[seqnum].file_start = 0;
+		HTTPSock_Status[seqnum].sock_status = STATE_HTTP_IDLE;
+		http_disconnect(s);
 			break;
 
 		case SOCK_CLOSED:
@@ -413,21 +381,29 @@ static void send_http_response_body(uint8_t s, uint8_t * uri_name, uint8_t * buf
 #endif
 	}
 
-/*****************************************************/
-	//HTTPSock_Status[get_seqnum]->storage_type == NONE
-	//HTTPSock_Status[get_seqnum]->storage_type == CODEFLASH
-	//HTTPSock_Status[get_seqnum]->storage_type == SDCARD
-	//HTTPSock_Status[get_seqnum]->storage_type == DATAFLASH
-/*****************************************************/
 
 	if(HTTPSock_Status[get_seqnum].storage_type == CODEFLASH)
 	{
 		if(HTTPSock_Status[get_seqnum].file_len) start_addr = HTTPSock_Status[get_seqnum].file_start;
 		read_userReg_webContent(start_addr, &buf[0], HTTPSock_Status[get_seqnum].file_offset, send_len);
 	}
+// ## 20141219 Eric added, for 'File object structure' (fs) allocation reduced (8 -> 1)
 #ifdef _USE_SDCARD_
 	else if(HTTPSock_Status[get_seqnum].storage_type == SDCARD)
 	{
+		
+			if((fr = f_open(&fs, (const char *)HTTPSock_Status[get_seqnum].file_name, FA_READ)) == 0)
+			{
+				f_lseek(&fs, HTTPSock_Status[get_seqnum].file_offset);
+			}
+			else
+			{
+				send_len = 0;
+#ifdef _HTTPSERVER_DEBUG_
+		printf("> HTTPSocket[%d] : [FatFs] Error code return: %d (File Open) / HTTP Send Failed - %s\r\n", s, fr, HTTPSock_Status[get_seqnum].file_name);
+#endif
+			}
+
 		// Data read from SD Card
 		fr = f_read(&fs, &buf[0], send_len, (void *)&blocklen);
 		if(fr != FR_OK)
@@ -519,6 +495,7 @@ static void http_process_handler(uint8_t s, st_http_request * p_http_request)
 	uint16_t content_num = 0;
 	uint32_t file_len = 0;
 
+	uint8_t post_name[32]={0x00,};	// POST method request file name
 	uint8_t uri_buf[MAX_URI_SIZE]={0x00, };
 
 	uint16_t http_status;
@@ -536,12 +513,17 @@ static void http_process_handler(uint8_t s, st_http_request * p_http_request)
 	{
 		case METHOD_ERR ://sai lenh,>> HTTP/1.1 400 OK
 			http_status = STATUS_BAD_REQ;
-			send_http_response_header(s, PTYPE_ERR, 0, http_status);
+			send_http_response_header(s, 0, 0, http_status);
 			break;
 
 		case METHOD_HEAD ://Dung lenh HEAD, GET
 		case METHOD_GET :
-			get_http_uri_name(p_http_request->URI, uri_buf);//Phan tich kieu URL la gi
+			if(!get_http_uri_name(p_http_request->URI, uri_buf))//Phan tich kieu URL la gi
+			{
+				send_http_response_header(s, p_http_request->TYPE, 0, STATUS_NOT_FOUND);
+				break;
+			}
+			
 			uri_name = uri_buf;
 
 			if (!strcmp((char *)uri_name, "/")) strcpy((char *)uri_name, INITIAL_WEBPAGE);	// If URI is "/", respond by index.html
@@ -568,7 +550,7 @@ static void http_process_handler(uint8_t s, st_http_request * p_http_request)
 				}
 			}
 			else
-			{
+			{// If No CGI request, Try to find The requested web content in storage (e.g., 'SD card' or 'Data flash')
 				// Find the User registered index for web content : Tim xem trong list ban dau co ko?
 				if(find_userReg_webContent(uri_buf, &content_num, &file_len))
 				{
@@ -665,10 +647,10 @@ static void http_process_handler(uint8_t s, st_http_request * p_http_request)
 					send_http_response_header(s, PTYPE_CGI, 0, STATUS_NOT_FOUND);
 				}
 			}
-			else if(!strcmp((char *)uri_name,"postForm"))//bat url postForm va xu ly
+			else if(!strcmp((char *)uri_name,"postForm"))//bat url postForm va xu ly => tuan tu viet doan nay
 			{
 				printf(" Got postForm\r\n");
-				send_http_response_header(s, PTYPE_ERR, 0, STATUS_NOT_FOUND);
+				send_http_response_header(s, 0, 0, STATUS_NOT_FOUND);
 			}
 			else	// HTTP POST Method; Content not found
 			{
