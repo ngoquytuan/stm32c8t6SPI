@@ -67,6 +67,27 @@ void default_wdt_reset(void) {;}
 void (*HTTPServer_ReStart)(void) = default_mcu_reset;
 void (*HTTPServer_WDT_Reset)(void) = default_wdt_reset;
 
+#define NO_CUSTOM_COMMAND 0
+	// return value - 	0: Failed (no custom command)
+//					1: Success
+//					2: Failed (custom command ok, but process error - e.g., I/O control failed)
+uint8_t custom_command_handler(
+	uint8_t * buf				/**< custom command: pointer to be parsed */
+	)
+{
+	uint8_t ret = NO_CUSTOM_COMMAND;
+
+#ifdef _CUSTOM_COMMAND_DEBUG_
+			//printf("[CWD] ");
+#endif
+
+	// if the command process succeed, ret = COMMAND_SUCCESS;
+	// if the command received but process failed, ret = COMMAND_ERROR;
+	// if the http request is not custom command, ret = NO_CUSTOM_COMMAND;
+
+	return ret;
+}
+
 void httpServer_Sockinit(uint8_t cnt, uint8_t * socklist)
 {
 	uint8_t i;
@@ -118,7 +139,7 @@ void httpServer_run(uint8_t seqnum)
 {
 	uint8_t s;	// socket number
 	uint16_t len;
-	uint32_t gettime = 0;
+	uint8_t ret = 0;
 
 #ifdef _HTTPSERVER_DEBUG_
 	uint8_t destip[4] = {0, };
@@ -151,7 +172,23 @@ void httpServer_run(uint8_t seqnum)
 					{
 						if (len > DATA_BUF_SIZE) len = DATA_BUF_SIZE;
 						len = recv(s, (uint8_t *)http_request, len);
+						// ## 20150828, Eric / Bongjun Hur added
+						if ((len = recv(s, (uint8_t *)http_request, len)) < 0) break;	// Exception handler
+						////////////////////////////////////////////////////////////////////////////////
+						// Todo; User defined custom command handler (userHandler.c)
+						ret = custom_command_handler((uint8_t *)http_request);
+						////////////////////////////////////////////////////////////////////////////////
+						
+						if(ret > 0) // Custom command handler
+						{
+							// Todo: Users can change this parts for custom function added
+							//if(ret == COMMAND_SUCCESS)		send(s, (uint8_t *)"CMDOK", 5);
+							//else if(ret == COMMAND_ERROR)	send(s, (uint8_t *)"CMDERROR", 8);
 
+							HTTPSock_Status[seqnum].sock_status = STATE_HTTP_RES_DONE;
+						}
+						else // HTTP process handler
+						{
 						*(((uint8_t *)http_request) + len) = '\0';// End of string (EOS) marker
 						//Phan loai HTTP GET, POST HEAD...
 						parse_http_request(parsed_http_request, (uint8_t *)http_request);
@@ -168,22 +205,11 @@ void httpServer_run(uint8_t seqnum)
 						// HTTP 'response' handler; includes send_http_response_header / body function
 						http_process_handler(s, parsed_http_request);
 
-						/*gettime = get_httpServer_timecount();
-						// Check the TX socket buffer for End of HTTP response sends
-						while(getSn_TX_FSR(s) != (getSn_TXBUF_SIZE(s)*1024))
-						{
-							if((get_httpServer_timecount() - gettime) > 3)
-							{
-#ifdef _HTTPSERVER_DEBUG_
-								printf("> HTTPSocket[%d] : TX Buffer clear timeout, STATE_HTTP_REQ_DONE\r\n", s);
-#endif
-								break;
-							}
-						}*/
 
 						if(HTTPSock_Status[seqnum].file_len > 0) HTTPSock_Status[seqnum].sock_status = STATE_HTTP_RES_INPROC;
 						else HTTPSock_Status[seqnum].sock_status = STATE_HTTP_RES_DONE; // Send the 'HTTP response' end
 					}
+				}
 					break;
 
 				case STATE_HTTP_RES_INPROC :
