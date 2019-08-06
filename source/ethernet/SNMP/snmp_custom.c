@@ -63,6 +63,10 @@ dataEntryType snmpData[] =
 	//{0x0a, {0x2b, 0x06, 0x01, 0x04, 0x01, 0x85, 0xb6, 0x38, 0x01, 0x00},
 	//SNMPDTYPE_OCTET_STRING, 40, {""},
 	//get_LEDStatus_all, NULL},
+	// Set the LED_R (RGB LED)
+	{8, {0x2b, 6, 1, 4, 1, 6, 1, 1},
+	SNMPDTYPE_INTEGER, 4, {""},
+	NULL, set_LEDStatus_R},
 #ifdef _USE_WIZNET_W5500_EVB_
 	// Get the WIZnet W5500-EVB LED Status
 	{8, {0x2b, 6, 1, 4, 1, 6, 1, 0},
@@ -115,6 +119,7 @@ void initTable()
 	snmpData[6].u.intval = -15;
 
 }
+
 void get_LEDStatus_all(void *ptr, uint8_t *len)
 {
 	uint8_t led_status[3] = {0, };
@@ -126,35 +131,52 @@ void get_LEDStatus_all(void *ptr, uint8_t *len)
 	*len = sprintf((char *)ptr, "LED R [%s] / G [%s] / B [%s]", led_status[LED_R]?"On":"Off", led_status[LED_G]?"On":"Off", led_status[LED_B]?"On":"Off");
 }
 
+void Board_LED_Set(int led, int i)
+{
+	printf("Board_LED_Set\r\n");
+}
+void set_LEDStatus_R(int32_t val)
+{
+	printf("set_LEDStatus_R :%d\r\n",val);
+	if(val == 0) 	Board_LED_Set(LED_R, 0);
+	else 			Board_LED_Set(LED_R, 1);
+}
+
 // W5500-EVB: LED Control ///////////////////////////////////////////////////////////////////////////
 #ifdef _USE_WIZNET_W5500_EVB_
 void get_LEDStatus_all(void *ptr, uint8_t *len)
 {
 	uint8_t led_status[3] = {0, };
 
-	led_status[LED_R] = (uint8_t)Board_LED_Test(LED_R);
-	led_status[LED_G] = (uint8_t)Board_LED_Test(LED_G);
-	led_status[LED_B] = (uint8_t)Board_LED_Test(LED_B);
+	//led_status[LED_R] = (uint8_t)Board_LED_Test(LED_R);
+	//led_status[LED_G] = (uint8_t)Board_LED_Test(LED_G);
+	//led_status[LED_B] = (uint8_t)Board_LED_Test(LED_B);
+	led_status[LED_R] = 1;
+	led_status[LED_G] = 0;
+	led_status[LED_B] = 1;
 
 	*len = sprintf((char *)ptr, "LED R [%s] / G [%s] / B [%s]", led_status[LED_R]?"On":"Off", led_status[LED_G]?"On":"Off", led_status[LED_B]?"On":"Off");
 }
 
 void set_LEDStatus_R(int32_t val)
 {
-	if(val == 0) 	Board_LED_Set(LED_R, false);
-	else 			Board_LED_Set(LED_R, true);
+	printf("set_LEDStatus_R :%d\r\n",val);
+	if(val == 0) 	Board_LED_Set(LED_R, 0);
+	else 			Board_LED_Set(LED_R, 1);
 }
 
 void set_LEDStatus_G(int32_t val)
 {
-	if(val == 0) 	Board_LED_Set(LED_G, false);
-	else 			Board_LED_Set(LED_G, true);
+	printf("set_LEDStatus_G\r\n");
+	if(val == 0) 	Board_LED_Set(LED_G, 0);
+	else 			Board_LED_Set(LED_G, 1);
 }
 
 void set_LEDStatus_B(int32_t val)
 {
-	if(val == 0) 	Board_LED_Set(LED_B, false);
-	else 			Board_LED_Set(LED_B, true);
+	printf("set_LEDStatus_B\r\n");
+	if(val == 0) 	Board_LED_Set(LED_B, 0);
+	else 			Board_LED_Set(LED_B, 1);
 }
 #endif
 /////////////////////////////////////////////////////////////////////////////////////////////////////

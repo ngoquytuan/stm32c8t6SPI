@@ -144,30 +144,10 @@ void PendSV_Handler(void)
 {
 }
 
-/**
-  * @brief  This function handles SysTick Handler.
-  * @param  SysTick Timer for 1 msec interrupt  
-  * @retval None
-  */
 
-//void SysTick_Handler(void)
-//{
-  //ms10k++;
-	/*
-	count1ms++;
-  if(count1ms >999) count1ms=count1ms-999;
-	
-	TimingDelay++;
-	if (task1s>1)  task1s--;
-	if (u1out > ONTIME) u1out--;
-	if (u2out > ONTIME) u2out--;
-	if (task100ms > ONTIME) task100ms--;
-	//SNMP_time_handler();
-	phystatus_check_cnt++;*/
-//}
 
 // USART Receiver buffer
-const uint8_t RX_BUFFER_SIZE0=20;
+const uint8_t RX_BUFFER_SIZE0 = 25;
 uint8_t USART1_index=0,USART1_rx_data_buff[RX_BUFFER_SIZE0];
 
 void USART1_IRQHandler(void)
@@ -178,11 +158,11 @@ void USART1_IRQHandler(void)
 	{
 		//USART_ClearITPendingBit(USART1, USART_IT_RXNE);
 		USART1_data=(USART1->DR & (uint16_t)0x01FF);
-		u1out=50;// 50ms
+		u1out = 50;// 50ms
 		USART1_rx_data_buff[USART1_index++]=USART1_data;
 
 		if(USART1_index==RX_BUFFER_SIZE0) USART1_index=0;
-			
+		//printf("Kiem tra uart 1\r\n");	
 	}
 	
 //	if(USART_GetITStatus(USART1, USART_IT_TXE) != RESET)

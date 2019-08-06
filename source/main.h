@@ -40,10 +40,11 @@
 */
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-#define ONTIME 1
-#define STOP   0
+//#define ONTIME 1
+//#define STOP   0
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
 void networkSevices();
 void loadwebpages();
+void usart1Process();
 #endif /* __MAIN_H */

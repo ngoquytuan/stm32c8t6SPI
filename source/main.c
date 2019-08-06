@@ -196,6 +196,7 @@ int main(void)
 		SNTP_run();
 		
 		}
+		usart1Process();
 		
 		
 
@@ -203,6 +204,27 @@ int main(void)
 
 		
 }//end of main
+// Chinh gio he thong theo ban tin GPS
+void configTimeFollowGPS()
+	{//=> Ban tin GPS: $GPS034007060819AA10 
+	
+}
+//Xu ly ban tin GPS
+void usart1Process()
+{
+	//UART1 RX process
+			if(u1out == ONTIME)
+			{
+				u1out = STOP;// Da nhan du ban tin UART => Xy ly
+				printf("UART1:%s\r\n",USART1_rx_data_buff);
+				configTimeFollowGPS();
+				for(USART1_index=0;USART1_index<RX_BUFFER_SIZE0;USART1_index++)
+															{
+															USART1_rx_data_buff[USART1_index]=0;
+															}  
+															USART1_index=0;
+			}
+}
 
 void networkSevices()
 {
@@ -224,8 +246,8 @@ void networkSevices()
     	// [Command] Get:			  snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.2.1.1.1.0 			// (sysDescr)
     	// [Command] Get: 			snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.0 			// (Custom, get LED status)
     	// [Command] Get-Next: 	snmpwalk -v 1 -c public 192.168.1.246 .1.3.6.1
-			// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.2.0 i 1			// (Custom, LED 'On')
-    	// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.2.0 i 0			// (Custom, LED 'Off')
+			// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.1 i 1			// (Custom, LED 'On')
+    	// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.1 i 0			// (Custom, LED 'Off')
 			snmpd_run();	
 	}
 	{	// web server 	

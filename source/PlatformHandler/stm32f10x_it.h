@@ -24,6 +24,7 @@
 #define __STM32F10x_IT_H
 
 /* Includes ------------------------------------------------------------------*/
+#include <stdio.h>
 #include "stm32f10x.h"
 //extern __IO uint32_t ms10k;
 #ifdef USE_INTERNAL_RTC

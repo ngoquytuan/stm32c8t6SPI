@@ -31,6 +31,7 @@ void initTable();
 	void set_LEDStatus_G(int32_t val);
 	void set_LEDStatus_B(int32_t val);
 #endif
+void set_LEDStatus_R(int32_t val);
 /* SNMP Trap: warmStart(1) */
 void initial_Trap(uint8_t * managerIP, uint8_t * agentIP);
 

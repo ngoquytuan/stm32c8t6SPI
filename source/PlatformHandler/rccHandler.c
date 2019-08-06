@@ -179,4 +179,20 @@ void GPIO_config(void)
 	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
 	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
 	EXTI_Init(&EXTI_InitStructure);
+	
+	/* Check if the system has resumed from IWDG reset */
+  if (RCC_GetFlagStatus(RCC_FLAG_IWDGRST) != RESET)
+  { 
+    /* WWDGRST flag set */
+    /* Turn on LED1 */
+    GPIO_PinWrite(GPIOA, 1, 0);
+    /* Clear reset flags */
+    RCC_ClearFlag();
+  }
+  else
+  {
+    /* WWDGRST flag is not set */
+    /* Turn off LED1 */
+    GPIO_PinWrite(GPIOA, 1, 1);
+  }
 }

@@ -18,6 +18,7 @@ volatile UINT Timer;
 extern void disk_timerproc (void);
 extern uint16_t RetrySend ; //60 giay
 extern uint16_t sycnPeriod ;// 1 gio
+
 //#include "dhcp.h"
 //#include "httpServer.h" // for function httpServer_time_handler()
 volatile uint32_t snmp_tick_1ms = 0;
@@ -37,6 +38,7 @@ void TIM2_IRQHandler(void)
 
 		//Todo
 		//Timer++;	/* Increment performance counter */
+		if (u1out > ONTIME) u1out--;
 		snmp_tick_1ms++;
 		msec_cnt++; // milli second
 		phystatus_check_cnt++;
