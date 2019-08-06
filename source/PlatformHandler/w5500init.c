@@ -12,6 +12,7 @@ wiz_NetInfo gWIZNETINFO = { .mac = {0x0c, 0x29, 0x34,0x7c, 0xab, 0xcd},
                             .dns = {8,8,8,8},
                             .dhcp = NETINFO_STATIC };
 
+uint8_t DNS_2nd[4]    = {168, 126, 63, 1};      // Secondary DNS server IP
 														
 /*-----------------------------------------------------------------------*/
 /* Wait for card ready                                                   */
@@ -120,6 +121,12 @@ void Display_Net_Conf()
 	printf("GW: %d.%d.%d.%d\r\n", gWIZNETINFO.gw[0], gWIZNETINFO.gw[1], gWIZNETINFO.gw[2], gWIZNETINFO.gw[3]);
 	printf("SN: %d.%d.%d.%d\r\n", gWIZNETINFO.sn[0], gWIZNETINFO.sn[1], gWIZNETINFO.sn[2], gWIZNETINFO.sn[3]);
 	printf("DNS: %d.%d.%d.%d\r\n", gWIZNETINFO.dns[0], gWIZNETINFO.dns[1], gWIZNETINFO.dns[2], gWIZNETINFO.dns[3]);
+	
+	//printf("\r\n=== DNS Client Example ===============\r\n");
+  //printf("> DNS 1st : %d.%d.%d.%d\r\n", gWIZNETINFO.dns[0], gWIZNETINFO.dns[1], gWIZNETINFO.dns[2], gWIZNETINFO.dns[3]);
+  //printf("> DNS 2nd : %d.%d.%d.%d\r\n", DNS_2nd[0], DNS_2nd[1], DNS_2nd[2], DNS_2nd[3]);
+  //printf("======================================\r\n");
+   //printf("> Example Domain Name : %s\r\n", Domain_name);
 }
 
 void Net_Conf(wiz_NetInfo netinfo)

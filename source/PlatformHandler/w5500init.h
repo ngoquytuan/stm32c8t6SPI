@@ -18,4 +18,5 @@ void w5500_lib_init(void);
 void Net_Conf(wiz_NetInfo netinfo);
 void checklink();
 extern wiz_NetInfo gWIZNETINFO;
+extern uint8_t DNS_2nd[4];
 #endif

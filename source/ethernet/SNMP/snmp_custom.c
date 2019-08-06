@@ -18,6 +18,17 @@
 #define LED_B 2
 void get_LEDStatus_all(void *ptr, uint8_t *len);
 
+void setMyValue(int value)	//snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.2 i 123456
+{
+	printf("Got my value :%d\r\n",value);
+}
+/*
+void getMyValue()						//snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.2
+{
+	printf("getMyValue\r\n");
+	//return 301188;
+}*/
+	
 dataEntryType snmpData[] =
 {
     // System MIB
@@ -67,6 +78,10 @@ dataEntryType snmpData[] =
 	{8, {0x2b, 6, 1, 4, 1, 6, 1, 1},
 	SNMPDTYPE_INTEGER, 4, {""},
 	NULL, set_LEDStatus_R},
+	// Set the my value 
+	{8, {0x2b, 6, 1, 4, 1, 6, 1, 2},
+	SNMPDTYPE_INTEGER, 4, {""},
+	NULL, setMyValue},
 #ifdef _USE_WIZNET_W5500_EVB_
 	// Get the WIZnet W5500-EVB LED Status
 	{8, {0x2b, 6, 1, 4, 1, 6, 1, 0},

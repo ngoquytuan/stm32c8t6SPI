@@ -20,7 +20,8 @@ webpages
 
 #include "main.h"
 
- 
+
+
 //////////////////////////////////////////////////////////////////////
 // Shared Buffer Definition WEB server////////////////////////////////
 //////////////////////////////////////////////////////////////////////
@@ -173,6 +174,7 @@ int main(void)
 	// NMS (SNMP manager) IP address
 	snmpd_init(managerIP,agentIP,SOCK_agent,SOCK_trap);	
 	loadwebpages();
+	
 	// IWDG Initialization: STM32 Independent WatchDog
 	IWDG_Config();
 	//timeinfo = localtime( &timenow );

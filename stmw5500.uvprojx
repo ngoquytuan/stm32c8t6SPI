@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_MD</Define>
               <Undefine></Undefine>
-              <IncludePath>.\source;.\source\util;.\source\PlatformHandler;.\source\ethernet;.\source\ethernet\W5500;.\source\FatFs;.\source\ethernet\SNMP;.\source\ethernet\httpServer;.\source\ethernet\SNTP</IncludePath>
+              <IncludePath>.\source;.\source\util;.\source\PlatformHandler;.\source\ethernet;.\source\ethernet\W5500;.\source\FatFs;.\source\ethernet\SNMP;.\source\ethernet\httpServer;.\source\ethernet\SNTP;.\source\ethernet\DNS</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -466,6 +466,11 @@
               <FileName>sntp.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\source\ethernet\SNTP\sntp.c</FilePath>
+            </File>
+            <File>
+              <FileName>dns.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\stmsdcard2Aug2019\stmsdcard\source\ethernet\DNS\dns.c</FilePath>
             </File>
           </Files>
         </Group>

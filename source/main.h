@@ -25,6 +25,7 @@
 #include "httpServer.h"
 #include "webpage.h"
 #include "sntp.h"
+#include "dns.h"
 /*
 #include "delay.h"
 #include "lcd16x2.h"

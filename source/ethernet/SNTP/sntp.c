@@ -11,16 +11,24 @@
 #include <time.h>
 #include "sntp.h"
 #include "socket.h"
+#include "dns.h"
+#include "w5500init.h"
+
 extern time_t timenow;
 uint8_t TimeIsSet = 0;
 uint16_t RetrySend = 0; //60 giay
 uint16_t sycnPeriod = 0;// 1 gio
 
+uint8_t Domain_ntpTimeServer[] = "0.asia.pool.ntp.org";    // for Example domain name
+//uint8_t Domain_IP[4]  = {0, };               // Translated IP address by DNS
+#define DNS_BUF_SIZE   200
+uint8_t ntpTimeServer_buf[DNS_BUF_SIZE];
+
 uint8_t ntpTimeServer_ip[4] ={139, 199, 215, 251};// NTP time server
 //uint8_t ntpTimeServer_ip[4] ={192, 168, 1, 6};// NTP time server
-uint8_t ntpTimeServer_buf[56];
+//uint8_t ntpTimeServer_buf[56];
 uint8_t ntpmessage[48]={0};
-uint8_t ntpServerRespond[56];
+//uint8_t ntpServerRespond[56];
 // Unix time starts on Jan 1 1970. In seconds, that's 2208988800:
 const uint32_t seventyYears = 2208988800;
 
@@ -83,9 +91,20 @@ const uint32_t seventyYears = 2208988800;
 void SNTP_init()
 {
 	uint8_t i;
-	ntpformat NTPformat;
-	uint8_t Flag;
-	
+	//ntpformat NTPformat;
+	int32_t ret = 0;
+	/* DNS client initialization */
+   DNS_init(SOCK_SNTP, ntpTimeServer_buf);
+	/* DNS procssing */
+   if ((ret = DNS_run(gWIZNETINFO.dns, Domain_ntpTimeServer, ntpTimeServer_ip)) > 0) // try to 1st DNS
+   {
+      printf("> 1st DNS Reponsed\r\n");
+
+   }
+	    if(ret > 0)
+   {
+      printf("> Translated %s to %d.%d.%d.%d\r\n",Domain_ntpTimeServer,ntpTimeServer_ip[0],ntpTimeServer_ip[1],ntpTimeServer_ip[2],ntpTimeServer_ip[3]);
+   }//Tim cach luu cai nay lai nhi?
 //	NTPformat.dstaddr[0] = ntpTimeServer_ip[0];
 //	NTPformat.dstaddr[1] = ntpTimeServer_ip[1];
 //	NTPformat.dstaddr[2] = ntpTimeServer_ip[2];

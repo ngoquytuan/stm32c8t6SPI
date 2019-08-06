@@ -12,6 +12,8 @@
 #include "timerHandler.h"
 #include "ff.h"
 #include "diskio.h"
+#include "dns.h"
+
 struct tm* timeinfo;
 extern time_t timenow;
 volatile UINT Timer;
@@ -51,6 +53,7 @@ void TIM2_IRQHandler(void)
 			msec_cnt = 0;
 			RetrySend++;
 			sycnPeriod++;
+			DNS_time_handler();
 		}
 		disk_timerproc();	/* Disk timer process */
 		/*if(sec_cnt >= 60 - 1)
