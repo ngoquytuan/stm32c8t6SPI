@@ -73,7 +73,8 @@ int32_t NTPUDP(uint8_t sn)
 						memcpy(&serverPacket[36], &micros_recv, 4);
 						
 						transmitTime = (timenow + STARTOFTIME);//gio luc tryen ban tin
-						micros_transmit = 100*ms10k;
+						//micros_transmit = 100*ms10k;
+					  //micros_transmit = 100*(TIM3->CNT);
 						//printf("tranTime: %u, micros_tran:%u\r\n",transmitTime,micros_transmit);
 						
 						transmitTime = htonl(transmitTime);// gio luc truyen
@@ -81,7 +82,8 @@ int32_t NTPUDP(uint8_t sn)
 						
 						
 						//Tinh toan phan thap phan cua thoi diem truyen tin
-						micros_transmit = 100*ms10k;
+						//micros_transmit = 100*ms10k;
+						micros_transmit = 100*(TIM3->CNT);
 						micros_transmit = (micros_transmit + 1) * USECSHIFT;
 						micros_transmit = htonl(micros_transmit);//Ko hieu lam gi nhi, nhung dung!
 						memcpy(&serverPacket[44], &micros_transmit, 4);

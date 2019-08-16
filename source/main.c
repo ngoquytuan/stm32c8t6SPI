@@ -29,7 +29,7 @@ uint8_t RX_BUF[DATA_BUF_SIZEHTTP];
 uint8_t TX_BUF[DATA_BUF_SIZEHTTP];
 uint8_t socknumlist[] = {5, 6, 7};
 
-volatile uint32_t ms10k;
+//volatile uint32_t ms10k;
 time_t timenow = 1564551507;
 
 
@@ -137,7 +137,7 @@ int main(void)
 	SystemInit();
 	SystemCoreClockUpdate();
 	/* Setup SysTick Timer for 1 msec interrupts  */
-  if (SysTick_Config(SystemCoreClock / 10000))
+  if (SysTick_Config(SystemCoreClock / 100))
   { 
     /* Capture error */ 
     while (1);
@@ -208,7 +208,7 @@ int main(void)
 }//end of main
 // Chinh gio he thong theo ban tin GPS
 void configTimeFollowGPS()
-	{//=> Ban tin GPS: $GPS034007060819AA10 
+{//=> Ban tin GPS: $GPS034007060819AA10 
 	
 }
 //Xu ly ban tin GPS
@@ -274,8 +274,8 @@ int fputc(int ch, FILE *f)
 
 void SysTick_Handler(void)
 {
-  ms10k++;
-	if(ms10k > 9999) ms10k = 0; 
+  //ms10k++;
+	//if(ms10k > 9999) ms10k = 0; 
 }
 
 
@@ -283,14 +283,18 @@ void SysTick_Handler(void)
 //Interrupt line 3 PA3 responds to data from W5500 and concatenates a flag.
 void EXTI3_IRQHandler(void)
 {
+
 	if(EXTI_GetITStatus(EXTI_Line3) != RESET)
 	{
+		micros_recv = 100*(TIM3->CNT);
 		EXTI_ClearITPendingBit(EXTI_Line3);	//Clear interrupt line
-		micros_recv = 100*ms10k;
+		//micros_recv = 100*ms10k;
+		
 		recvTime = (timenow + STARTOFTIME);//gio luc nhan dc ban tin	
 		//W5500RecInt=1;
 		//printf("EXTI3_IRQHandler\r\n");
 		//ntpserverprocess();
+
 	}
 }
 

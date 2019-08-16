@@ -80,7 +80,8 @@ void Timer_Configuration(void)
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
-
+	//tim uptade frequency = TIM_CLK/(TIM_PSC+1)/(TIM_ARR + 1)
+	//TIM_CLK/(TIM_Period + 1) /(Prescaler+1)
   /* Time base configuration */
   TIM_TimeBaseStructure.TIM_Period = 1000;// count 10000 tick then interrupt, gia tri max cua bo dem
   TIM_TimeBaseStructure.TIM_Prescaler = 0;
@@ -97,6 +98,26 @@ void Timer_Configuration(void)
 
   /* TIM IT enable */
   TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+	/***************************************************************************************************************/
+	//	16/Aug/2019, Tuan, use Tim3 for make a couter 0-0.9999 second for NTP fraction
+	//TIM3
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+
+	//tim uptade frequency = TIM_CLK/(TIM_PSC+1)/(TIM_ARR + 1)
+	//TIM_CLK/(TIM_Period + 1) /(Prescaler+1)
+  /* Time base configuration */
+  TIM_TimeBaseStructure.TIM_Period = 9999;// count 9999 tick then interrupt, gia tri max cua bo dem
+  TIM_TimeBaseStructure.TIM_Prescaler = 0;
+  TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+  TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+
+  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+
+  /* Prescaler configuration */
+  TIM_PrescalerConfig(TIM3, 7199, TIM_PSCReloadMode_Immediate);
+
+  /* TIM enable counter */
+  TIM_Cmd(TIM3, ENABLE);
 
 #ifdef ENABLE_TIMER_INT
   // Timer for delay
