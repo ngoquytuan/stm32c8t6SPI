@@ -2,7 +2,16 @@
 #include "stm32f10x.h"                  // Device header
 #include "GPIO_STM32F10x.h"             // Keil::Device:GPIO
 #include "uartHandler.h"   
-
+//Kiem tra dinh nghia fputc
+//Redefining low-level library functions to enable direct use of high-level library functions in the C library
+//http://www.keil.com/support/man/docs/armlib/armlib_chr1358938931411.htm
+int fputc(int ch, FILE *f)
+{      
+	while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET)
+		; 
+    USART_SendData(USART1,(char)ch);   
+	return ch;
+}
 //#include <stdarg.h>
 
 
@@ -54,7 +63,6 @@ void USER_UART_NVIC(void)
 	/* Configure the NVIC Preemption Priority Bits */  
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_0);
 	NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
-  //NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);

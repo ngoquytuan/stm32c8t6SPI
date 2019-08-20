@@ -163,8 +163,7 @@ void GPIO_config(void)
 
 	// Enable the EXTI3 Interrupt 
 	NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;				//W5500_INT External interrupt channel
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x02;	//Preemption priority 2 
-	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x02;			//Subpriority 2
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;			//Subpriority 2
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;					//Enable external interrupt channel
 	NVIC_Init(&NVIC_InitStructure);
 

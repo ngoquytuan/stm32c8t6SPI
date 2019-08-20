@@ -170,15 +170,20 @@ int8_t SNTP_run()//datetime sntp;
 	case SOCK_UDP:
 		if ((size = getSn_RX_RSR(SOCK_SNTP)) > 0)
 		{
-			//printf("\r\n size:%d\r\n",size);
+			//printf("\r\nsize:%d, ret:%d, NTP: ",size,ret);
 			if (size > 56) size = 56;	// if Rx data size is lager than TX_RX_MAX_BUF_SIZE
 			recvfrom(SOCK_SNTP, ntpTimeServer_buf, size, (uint8_t *)&destip, &destport);
-			
+			//Mot ban tin tu NTP Time Server
+			//24 3 6 e8 0 0 2c 3c 0 0 e 7d 8e 93 5c 5 e1 6 3a 76 77 3a 48 cf 0 0 0 0 0 0 0 0 e1 6 3e 9d 25 4f 82 99 e1 6 3e 9d 25 52 19 13
+//			for(i=0;i<48;i++)
+//						{
+//						   printf("%x ",*(ntpTimeServer_buf+i));
+//						}
 			sec = (ntpTimeServer_buf[40]<<24) + (ntpTimeServer_buf[41]<<16) + (ntpTimeServer_buf[42]<<8) + ntpTimeServer_buf[43] ;
 			//printf("Seconds: %u\r\n",sec-seventyYears);
 			timenow = sec-seventyYears;
 			
-			printf("Seconds: %u\r\n",timenow);
+			printf("\r\nSeconds: %u\r\n",timenow);
 			TimeIsSet = 1;
 			close(SOCK_SNTP);
 

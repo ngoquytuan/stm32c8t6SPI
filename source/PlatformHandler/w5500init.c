@@ -8,7 +8,7 @@ extern volatile uint16_t phystatus_check_cnt;
 wiz_NetInfo gWIZNETINFO = { .mac = {0x0c, 0x29, 0x34,0x7c, 0xab, 0xcd},
                             .ip = {192, 168, 1, 246},
                             .sn = {255,255,255,1},
-                            .gw = {193, 168, 1, 1},
+                            .gw = {192, 168, 1, 1},
                             .dns = {8,8,8,8},
                             .dhcp = NETINFO_STATIC };
 

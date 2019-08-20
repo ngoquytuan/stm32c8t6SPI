@@ -21,37 +21,163 @@ webpages
 #include "main.h"
 
 
-
-//////////////////////////////////////////////////////////////////////
-// Shared Buffer Definition WEB server////////////////////////////////
-//////////////////////////////////////////////////////////////////////
-uint8_t RX_BUF[DATA_BUF_SIZEHTTP];
-uint8_t TX_BUF[DATA_BUF_SIZEHTTP];
-uint8_t socknumlist[] = {5, 6, 7};
-
 //volatile uint32_t ms10k;
 time_t timenow = 1564551507;
 
 
 /**************************************************************************/
 /* Fatfs structure */
-FATFS FS;
+//FATFS FS;
 /* Size structure for FATFS */
-TM_FATFS_Size_t CardSize;
+//TM_FATFS_Size_t CardSize;
 
 
-/**
-  * @brief  sw_eeprom_stm32
-  * @param  make some flash blocks come eeprom for store data
-  * @retval  just call this fuction
-  */	
-void sw_eeprom_stm32(void)
-{
-		/* Unlock the Flash Program Erase controller */
-  FLASH_Unlock();
-  /* EEPROM Init */
-  if(EE_Init() == FLASH_COMPLETE) printf("Emu EEPROM STM32 ready !\r\n");
+/**************************************************************************/
+int main(void)
+{	
+	int32_t ret = 0;
+	int8_t ledstt;
+	// MCU Initialization
+	//RCC_Configuration();
+	SystemInit();
+	SystemCoreClockUpdate();
+	/* Setup SysTick Timer for 1 msec interrupts  */
+  if (SysTick_Config(SystemCoreClock / 100))
+  { 
+    /* Capture error */ 
+    while (1);
+  }
+	//Thu vien tang thap
+	GPIO_config();
+	SPI1_Init();
+	USART1_Init();
+	//printmcuclk();
+	Timer_Configuration();
+	//using stm32's flash to store data
+	//EEPROM STM32 init
+	sw_eeprom_stm32();
+	test_eeprom();
+	delay_ms(1);
+	//Thu vien tang cao
+	w5500_lib_init();
+	
+//	if(!disk_initialize(0)) printf("SDcard initialize OK\n");
+//	/* Try to mount card */
+//	if (f_mount(&FS, "\0", 1) == FR_OK) {//f_mount will call disk_initialize
+//		TM_FATFS_GetDriveSize("\0", &CardSize);
+//		/* Unmount SDCARD */
+//		//f_mount(NULL, "\0", 1);
+//	}
+	
+	printf("Run, now is %s\r\n",ctime(&timenow));
+	//Get time from ntp time server
+	SNTP_init();
+	//SNTP_init(SOCK_SNTP,sntp_ip,11,sntp_buf);	
+	
+	ntpserverdefaultconfig();
+	/* SNMP(Simple Network Management Protocol) Agent Initialize */
+	// NMS (SNMP manager) IP address
+	snmpd_init(managerIP,agentIP,SOCK_agent,SOCK_trap);	
+	loadwebpages();
+	
+	// IWDG Initialization: STM32 Independent WatchDog
+	IWDG_Config();
+	//timeinfo = localtime( &timenow );
+	//printf("Current local time and date: %s\r\n", asctime(timeinfo));
+	/*****************************MAIN WHILE************************************/
+	while(1)
+	{
+		IWDG_ReloadCounter(); // Feed IWDG
+		/**********************************************************************/
+		networkSevices();
+		/**********************************************************************/
+
+		/**********************************************************************/
+		
+		if(sec_cnt > 1)
+		{
+			sec_cnt = 0;
+			//timeinfo = localtime( &timenow );
+			//printf("sec_cnt :%d, ms10k : %d, timenow :%d\r\n",sec_cnt,ms10k,timenow);
+			SNTP_run();
+			if(ledstt == 1) 
+				{
+					//GPIO_PinWrite(GPIOA, 1, 0);
+					ledstt = 0;
+				}
+			else
+				{
+					//GPIO_PinWrite(GPIOA, 1, 1);
+					ledstt = 1;
+				}
+		}
+		/**********************************************************************/
+		//LED blinky : CPU run  
+		if(msec_cnt < 500) GPIO_PinWrite(GPIOA, 1, 0);
+		else GPIO_PinWrite(GPIOA, 1, 1);
+		/**********************************************************************/
+		usart1Process();
+		
+		
+
+	}//end of main while
+
+		
+}//end of main
+/**********************************************************************/
+// Chinh gio he thong theo ban tin GPS
+void configTimeFollowGPS(void)
+{//=> Ban tin GPS: $GPS034007060819AA10 
+	
 }
+//Xu ly ban tin GPS
+void usart1Process(void)
+{
+	//UART1 RX process
+			if(u1out == ONTIME)
+			{
+				u1out = STOP;// Da nhan du ban tin UART => Xy ly
+				printf("UART1:%s\r\n",USART1_rx_data_buff);
+				configTimeFollowGPS();
+				for(USART1_index=0;USART1_index<RX_BUFFER_SIZE0;USART1_index++)
+															{
+															USART1_rx_data_buff[USART1_index]=0;
+															}  
+															USART1_index=0;
+			}
+}
+
+void networkSevices(void)
+{
+	int32_t ret = 0;	
+	checklink();//Kiem tra day mang con cam ko
+	// NTP UDP server chay dau tien cho nhanh
+	if( (ret = NTPUDP(SOCK_UDPS)) < 0) {
+			printf("SOCKET ERROR : %d\r\n", ret);
+	}
+	{	//SNMPv1 run
+			//Run SNMP Agent Fucntion
+			/* SNMP Agent Handler */
+			//SMI Network Management Private Enterprise Codes: : moi cong ty phai dang ky 1 so rieng, 
+			//tham khao : https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+			// Vi du Arduino : 36582
+    	// SNMP Agent daemon process : User can add the OID and OID mapped functions to snmpData[] array in snmprun.c/.h
+			// [net-snmp version 5.7 package for windows] is used for this demo.
+			// * Command example
+    	// [Command] Get:			  snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.2.1.1.1.0 			// (sysDescr)
+    	// [Command] Get: 			snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.0 			// (Custom, get LED status)
+    	// [Command] Get-Next: 	snmpwalk -v 1 -c public 192.168.1.246 .1.3.6.1
+			// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.1 i 1			// (Custom, LED 'On')
+    	// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.1 i 0			// (Custom, LED 'Off')
+			snmpd_run();	
+	}
+	{	// web server 	
+			httpServer_run(0);
+			httpServer_run(1);
+			httpServer_run(2);
+		}
+}
+
 
 /**
   * @brief  test_eeprom
@@ -128,206 +254,12 @@ void test_eeprom(void)
 
 }
 
-/**************************************************************************/
-int main(void)
-{	
-	int32_t ret = 0;
-	// MCU Initialization
-	//RCC_Configuration();
-	SystemInit();
-	SystemCoreClockUpdate();
-	/* Setup SysTick Timer for 1 msec interrupts  */
-  if (SysTick_Config(SystemCoreClock / 100))
-  { 
-    /* Capture error */ 
-    while (1);
-  }
-	//Thu vien tang thap
-	GPIO_config();
-	SPI1_Init();
-	USART1_Init();
-	//printmcuclk();
-	Timer_Configuration();
-	//using stm32's flash to store data
-	//EEPROM STM32 init
-	sw_eeprom_stm32();
-	test_eeprom();
-	delay_ms(1);
-	//Thu vien tang cao
-	w5500_lib_init();
-	if(!disk_initialize(0)) printf("SDcard initialize OK\n");
-	
-	printf("Run, now is %s\r\n",ctime(&timenow));
-
-	/* Try to mount card */
-	if (f_mount(&FS, "\0", 1) == FR_OK) {//f_mount will call disk_initialize
-		TM_FATFS_GetDriveSize("\0", &CardSize);
-		/* Unmount SDCARD */
-		//f_mount(NULL, "\0", 1);
-	}
-	//Get time from ntp time server
-	SNTP_init();
-	//SNTP_init(SOCK_SNTP,sntp_ip,11,sntp_buf);	
-	
-	ntpserverdefaultconfig();
-	/* SNMP(Simple Network Management Protocol) Agent Initialize */
-	// NMS (SNMP manager) IP address
-	snmpd_init(managerIP,agentIP,SOCK_agent,SOCK_trap);	
-	loadwebpages();
-	
-	// IWDG Initialization: STM32 Independent WatchDog
-	IWDG_Config();
-	//timeinfo = localtime( &timenow );
-	//printf("Current local time and date: %s\r\n", asctime(timeinfo));
-	while(1)
-	{
-		IWDG_ReloadCounter(); // Feed IWDG
-		networkSevices();
-		/**********************************************************************/
-
-		/**********************************************************************/
-		
-		if(sec_cnt > 1)
-		{
-			sec_cnt = 0;
-			//timeinfo = localtime( &timenow );
-			//printf("sec_cnt :%d, ms10k : %d, timenow :%d\r\n",sec_cnt,ms10k,timenow);
-		/*if( (ret = SNTP_run(&sntp)) == 0) {
-			printf("SNTP ERR : %d\r\n", ret);
-		}*/
-		SNTP_run();
-		
-		}
-		usart1Process();
-		
-		
-
-	}
-
-		
-}//end of main
-// Chinh gio he thong theo ban tin GPS
-void configTimeFollowGPS()
-{//=> Ban tin GPS: $GPS034007060819AA10 
-	
-}
-//Xu ly ban tin GPS
-void usart1Process()
-{
-	//UART1 RX process
-			if(u1out == ONTIME)
-			{
-				u1out = STOP;// Da nhan du ban tin UART => Xy ly
-				printf("UART1:%s\r\n",USART1_rx_data_buff);
-				configTimeFollowGPS();
-				for(USART1_index=0;USART1_index<RX_BUFFER_SIZE0;USART1_index++)
-															{
-															USART1_rx_data_buff[USART1_index]=0;
-															}  
-															USART1_index=0;
-			}
-}
-
-void networkSevices()
-{
-	int32_t ret = 0;	
-	checklink();//Kiem tra day mang con cam ko
-	// NTP UDP server chay dau tien cho nhanh
-	if( (ret = NTPUDP(SOCK_UDPS)) < 0) {
-			printf("SOCKET ERROR : %d\r\n", ret);
-	}
-	{	//SNMPv1 run
-			//Run SNMP Agent Fucntion
-			/* SNMP Agent Handler */
-			//SMI Network Management Private Enterprise Codes: : moi cong ty phai dang ky 1 so rieng, 
-			//tham khao : https://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
-			// Vi du Arduino : 36582
-    	// SNMP Agent daemon process : User can add the OID and OID mapped functions to snmpData[] array in snmprun.c/.h
-			// [net-snmp version 5.7 package for windows] is used for this demo.
-			// * Command example
-    	// [Command] Get:			  snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.2.1.1.1.0 			// (sysDescr)
-    	// [Command] Get: 			snmpget -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.0 			// (Custom, get LED status)
-    	// [Command] Get-Next: 	snmpwalk -v 1 -c public 192.168.1.246 .1.3.6.1
-			// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.1 i 1			// (Custom, LED 'On')
-    	// [Command] Set: 			snmpset -v 1 -c public 192.168.1.246 .1.3.6.1.4.1.6.1.1 i 0			// (Custom, LED 'Off')
-			snmpd_run();	
-	}
-	{	// web server 	
-			httpServer_run(0);
-			httpServer_run(1);
-			httpServer_run(2);
-		}
-	//SNTP_sevice();
-}
-
-//Kiem tra dinh nghia fputc
-//Redefining low-level library functions to enable direct use of high-level library functions in the C library
-//http://www.keil.com/support/man/docs/armlib/armlib_chr1358938931411.htm
-int fputc(int ch, FILE *f)
-{      
-	while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET)
-		; 
-    USART_SendData(USART1,(char)ch);   
-	return ch;
-}
-
-
-void SysTick_Handler(void)
-{
-  //ms10k++;
-	//if(ms10k > 9999) ms10k = 0; 
-}
 
 
 
-//Interrupt line 3 PA3 responds to data from W5500 and concatenates a flag.
-void EXTI3_IRQHandler(void)
-{
 
-	if(EXTI_GetITStatus(EXTI_Line3) != RESET)
-	{
-		micros_recv = 100*(TIM3->CNT);
-		EXTI_ClearITPendingBit(EXTI_Line3);	//Clear interrupt line
-		//micros_recv = 100*ms10k;
-		
-		recvTime = (timenow + STARTOFTIME);//gio luc nhan dc ban tin	
-		//W5500RecInt=1;
-		//printf("EXTI3_IRQHandler\r\n");
-		//ntpserverprocess();
 
-	}
-}
 
-void loadwebpages()
-{
-		//Lien quan den webserver
-		//reg_httpServer_cbfunc(NVIC_SystemReset, NULL); 
-		reg_httpServer_cbfunc(NVIC_SystemReset, IWDG_ReloadCounter); // Callback: STM32 MCU Reset / WDT Reset (IWDG)
-		/* HTTP Server Initialization  */
-		httpServer_init(TX_BUF, RX_BUF, MAX_HTTPSOCK, socknumlist);
-		reg_httpServer_webContent((uint8_t *)"index.html", (uint8_t *)index_page);				// index.html 		: Main page example
-		reg_httpServer_webContent((uint8_t *)"netinfo.html", (uint8_t *)netinfo_page);			// netinfo.html 	: Network information example page
-		reg_httpServer_webContent((uint8_t *)"netinfo.js", (uint8_t *)wiz550web_netinfo_js);	// netinfo.js 		: JavaScript for Read Network configuration 	(+ ajax.js)
-		reg_httpServer_webContent((uint8_t *)"img.html", (uint8_t *)img_page);					// img.html 		: Base64 Image data example page
 
-		// Example #1
-		reg_httpServer_webContent((uint8_t *)"dio.html", (uint8_t *)dio_page);					// dio.html 		: Digital I/O control example page
-		reg_httpServer_webContent((uint8_t *)"dio.js", (uint8_t *)wiz550web_dio_js);			// dio.js 			: JavaScript for digital I/O control 	(+ ajax.js)
 
-		// Example #2
-		reg_httpServer_webContent((uint8_t *)"ain.html", (uint8_t *)ain_page);					// ain.html 		: Analog input monitor example page
-		reg_httpServer_webContent((uint8_t *)"ain.js", (uint8_t *)wiz550web_ain_js);			// ain.js 			: JavaScript for Analog input monitor	(+ ajax.js)
 
-		// Example #3
-		reg_httpServer_webContent((uint8_t *)"ain_gauge.html", (uint8_t *)ain_gauge_page);		// ain_gauge.html 	: Analog input monitor example page; using Google Gauge chart
-		reg_httpServer_webContent((uint8_t *)"ain_gauge.js", (uint8_t *)ain_gauge_js);			// ain_gauge.js 	: JavaScript for Google Gauge chart		(+ ajax.js)
-
-		// AJAX JavaScript functions
-		reg_httpServer_webContent((uint8_t *)"ajax.js", (uint8_t *)wiz550web_ajax_js);			// ajax.js			: JavaScript for AJAX request transfer
-		
-		//favicon.ico
-		reg_httpServer_webContent((uint8_t *)"favicon.ico", (uint8_t *)pageico);			// favicon.ico
-		//config page
-		reg_httpServer_webContent((uint8_t *)"config.html", (uint8_t *)configpage);			// config.html
-		display_reg_webContent_list();
-}

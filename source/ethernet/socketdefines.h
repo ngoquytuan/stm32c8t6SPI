@@ -14,9 +14,16 @@
 #define MAX_HTTPSOCK		 3
 
 #define DATA_BUF_SIZEHTTP   2048
+#define WZN_ERR -1
+// Time Server Port
+#define NTP_PORT							123
+#define NTP_PACKET_SIZE 			48
+#define NTP_PACKET_RAWSIZE		56
+
 ///////////////////////////////////////////////////////////////////////
 // PHYStatus check ////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 #define MSEC_PHYSTATUS_CHECK 		1000		// msec
 #define PHYStatus_check_enable 1
+
 #endif

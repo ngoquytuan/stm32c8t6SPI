@@ -23,7 +23,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "eeprom_stm.h"
-
+#include <stdio.h>
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -41,6 +41,19 @@ static FLASH_Status EE_Format(void);
 static uint16_t EE_FindValidPage(uint8_t Operation);
 static uint16_t EE_VerifyPageFullWriteVariable(uint16_t VirtAddress, uint16_t Data);
 static uint16_t EE_PageTransfer(uint16_t VirtAddress, uint16_t Data);
+
+/**
+  * @brief  sw_eeprom_stm32
+  * @param  make some flash blocks come eeprom for store data
+  * @retval  just call this fuction
+  */	
+void sw_eeprom_stm32(void)
+{
+		/* Unlock the Flash Program Erase controller */
+  FLASH_Unlock();
+  /* EEPROM Init */
+  if(EE_Init() == FLASH_COMPLETE) printf("Emu EEPROM STM32 ready !\r\n");
+}
 
 /**
   * @brief  Restore the pages to a known good state in case of page's status

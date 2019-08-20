@@ -143,7 +143,7 @@ void get_LEDStatus_all(void *ptr, uint8_t *len)
 	led_status[LED_G] = 0;
 	led_status[LED_B] = 1;
 
-	*len = sprintf((char *)ptr, "LED R [%s] / G [%s] / B [%s]", led_status[LED_R]?"On":"Off", led_status[LED_G]?"On":"Off", led_status[LED_B]?"On":"Off");
+	*len = sprintf((char *)ptr, "GPS 1 [%s] / 2 [%s] ", led_status[LED_R]?"On":"Off", led_status[LED_G]?"On":"Off");
 }
 
 void Board_LED_Set(int led, int i)

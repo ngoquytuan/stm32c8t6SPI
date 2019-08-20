@@ -1,5 +1,5 @@
 #include "ntpserver.h"
-extern volatile uint32_t ms10k;
+
 extern time_t timenow;
 //for NTP server
 time_t unixTime_last_sync = 1559640302;// lan chuan gio gan nhat 
@@ -39,12 +39,12 @@ int32_t NTPUDP(uint8_t sn)
             }
 					{
 						//in ra ban tin
-						/*
-						for(i=0;i<48;i++)
-						{
-						   printf("%x ",*(buf+i));
-						}
-						*/
+						
+						//for(i=0;i<48;i++)
+						//{
+						  // printf("%x ",*(clientPacket+i));
+						//}
+						
 						//Tao ban tin NTP
 						//ntpserverdefaultconfig();
 						/*
@@ -57,8 +57,44 @@ int32_t NTPUDP(uint8_t sn)
 						serverPacket[14] = 'S';
 						//[Reference Timestamp]: unsigned 32-bit seconds value : Lan lay chuan gan nhat la bao gio
 						memcpy(&serverPacket[16], &unixTime_last_sync, 4);
+						
+					serverPacket[0]=0x24;	// Leap 0x0, Version 0x3, Mode 0x4
+				  serverPacket[1]=0x03;	// Stratum 0x1, stratum (GPS)
+				  serverPacket[2]=0x06;	// polling minimum (64 seconds - default)
+				  //  serverPacket[3] = 0xFA; // precision (reference sketch - ~15 milliseconds)
+					//serverPacket[3] = 0xF7; // precision (2^-9 ~2 milliseconds)
+					serverPacket[3] = 0xE8; 
+					//  serverPacket[3] = 0x09; // precision (2^9 Testing)
+					// root delay
+					serverPacket[4]=0x0;
+					serverPacket[5]=0x0;
+					serverPacket[6]=0x2C;
+					serverPacket[7]=0x3C;
+					
+					serverPacket[8]=0x0;
+					serverPacket[9]=0x0;
+					serverPacket[10]=0x0E;
+					serverPacket[11] = 0x7D; // root dispersion
+					
+					serverPacket[12]=0x47;	// Reference ID, "G"
+					serverPacket[13]=0x50;	// Reference ID, "P"
+					serverPacket[14]=0x53;	// Reference ID, "S"
+					serverPacket[15]=0x00;	// Reference ID, 0x00
+					//Reference Timestamp : e1 6 3a 76 77 3a 48 cf
+					serverPacket[16]=0xE1;
+					serverPacket[17]=0x06;
+					serverPacket[18]=0x3A;
+					serverPacket[19]=0x76;
+					
+					serverPacket[20]=0x77;
+					serverPacket[21]=0x3A;
+					serverPacket[22]=0x48;
+					serverPacket[23]=0xCF;
 						*/
 					}
+					
+
+					
 						//Transmit Timestamp, T3 from client, copy and return! 
 						memcpy(&serverPacket[24], &clientPacket[40], 4);
 						memcpy(&serverPacket[28], &clientPacket[44], 4);
@@ -128,44 +164,64 @@ void ntpserverdefaultconfig(void)
 		serverPacket[13] = 'P';
 		serverPacket[14] = 'S';
 		//[Reference Timestamp]: unsigned 32-bit seconds value : Lan lay chuan gan nhat la bao gio
-		memcpy(&serverPacket[16], &unixTime_last_sync, 4);
+		//memcpy(&serverPacket[16], &unixTime_last_sync, 4);
+	
+	//Reference Timestamp : e1 6 3a 76 77 3a 48 cf
+					serverPacket[16]=0xE1;
+					serverPacket[17]=0x06;
+					serverPacket[18]=0x3A;
+					serverPacket[19]=0x76;
+					
+					serverPacket[20]=0;
+					serverPacket[21]=0;
+					serverPacket[22]=0;
+					serverPacket[23]=0;
 }
 /********************************************************************************************************************/
 void wzn_event_handle(void)
 {
 	uint16_t ir = 0;
 	uint8_t sir = 0;
-	uint16_t len = 0;
-	static const int8_t WZN_ERR = -1;
 	
 	
 	if (ctlwizchip(CW_GET_INTERRUPT, &ir) == WZN_ERR) {
 		printf("Cannot get ir...");
+		return;
 	}
 	
-	if (ir & IK_SOCK_0) {
-		sir = getSn_IR(SOCK_UDPS);
-		
-	
-		//printf("IK_SOCK_1");
-		
-		if ((sir & Sn_IR_SENDOK) > 0) {
-			/* Clear Sn_IR_SENDOK flag. */
-			setSn_IR(SOCK_UDPS, Sn_IR_SENDOK);
-			printf("app_sent();\r\n");
-			//app_sent();
+	if (ir & IK_SOCK_0) 
+		{
+				sir = getSn_IR(SOCK_UDPS);
+				
+				if ((sir & Sn_IR_RECV) > 0) {
+					/* Clear Sn_IR_RECV flag. */
+					setSn_IR(SOCK_UDPS, Sn_IR_RECV);
+					return;
+				}
+				else if ((sir & Sn_IR_SENDOK) > 0) {
+					/* Clear Sn_IR_SENDOK flag. */
+					setSn_IR(SOCK_UDPS, Sn_IR_SENDOK);
+					printf("app_sent();\r\n");
+					//app_sent();
+				}
 		}
+}
+
+//Interrupt line 3 PA3 responds to data from W5500 and concatenates a flag.
+void EXTI3_IRQHandler(void)
+{
+
+	if(EXTI_GetITStatus(EXTI_Line3) != RESET)
+	{
+		micros_recv = 100*(TIM3->CNT);
+		EXTI_ClearITPendingBit(EXTI_Line3);	//Clear interrupt line
+		//micros_recv = 100*ms10k;
 		
-		if ((sir & Sn_IR_RECV) > 0) {
-			//len = getSn_RX_RSR(SOCK_UDPS);
-			//printf("UDP packet received!\r\n");
-			//printf("recvTime: %u, micros_recv:%u\r\n",recvTime,micros_recv);
-			//transmitTime = (timenow + STARTOFTIME);//gio luc tryen ban tin
-			//micros_transmit = getns();
-			//printf("transmitTime: %u, micros_transmit:%u\r\n",transmitTime,micros_transmit);
-			/* Clear Sn_IR_RECV flag. */
-			setSn_IR(SOCK_UDPS, Sn_IR_RECV);
-			
-		}
+		recvTime = (timenow + STARTOFTIME);//gio luc nhan dc ban tin
+		//Neu goi cai nay thi loi????
+		//NTPUDP(SOCK_UDPS);		
+		//printf("EXTI3_IRQHandler\r\n");
+
+
 	}
 }

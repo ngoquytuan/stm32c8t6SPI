@@ -7,7 +7,7 @@
 #include "delay.h"
 #include "spiconfig.h"
 #include "socketdefines.h"
-static const int8_t WZN_ERR = -1;
+//static const int8_t WZN_ERR = -1;
 /*
 #define W5500_CS_GPIO_PORT    GPIOA
 #define W5500_CS_PIN					0

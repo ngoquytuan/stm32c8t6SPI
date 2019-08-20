@@ -45,7 +45,8 @@
 //#define STOP   0
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
-void networkSevices();
-void loadwebpages();
-void usart1Process();
+void networkSevices(void);
+void loadwebpages(void);
+void usart1Process(void);
+void test_eeprom(void);
 #endif /* __MAIN_H */

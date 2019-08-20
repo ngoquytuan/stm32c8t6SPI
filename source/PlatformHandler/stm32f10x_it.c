@@ -240,6 +240,11 @@ void RTC_IRQHandler(void)
 }
 #endif
 
+void SysTick_Handler(void)
+{
+  //ms10k++;
+	//if(ms10k > 9999) ms10k = 0; 
+}
 /**
   * @brief  This function handles TIM global interrupt request.
   * @param  None

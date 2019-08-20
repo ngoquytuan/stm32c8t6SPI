@@ -466,7 +466,7 @@ ARM Macro Assembler    Page 8
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --depend=.\ob
 jects\startup_stm32f10x_md.d -o.\objects\startup_stm32f10x_md.o -I.\RTE\Device\
 STM32F103C8 -I.\RTE\_c8t6w5500 -IC:\Users\ngoqu\AppData\Local\Arm\Packs\ARM\CMS
-IS\5.5.1\CMSIS\Core\Include -IC:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32
+IS\5.6.0\CMSIS\Core\Include -IC:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM32
 F1xx_DFP\2.3.0\Device\Include -IC:\Users\ngoqu\AppData\Local\Arm\Packs\Keil\STM
 32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc -IC:\Users\ngoqu\AppData\Local\Arm
 \Packs\Keil\STM32F1xx_DFP\2.3.0\RTE_Driver --predefine="__MICROLIB SETA 1" --pr

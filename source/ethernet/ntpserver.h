@@ -5,10 +5,8 @@
 #include "w5500.h"
 #include "socket.h"
 #include "socketdefines.h"
-// Time Server Port
-#define NTP_PORT 123
-static const int NTP_PACKET_SIZE = 48;
-static const int NTP_PACKET_RAWSIZE = 56;
+
+
 /* Shifts usecs in unixToNtpTime */
 //??? ko hieu nhung dung! 
 #ifndef USECSHIFT
@@ -43,6 +41,6 @@ extern time_t micros_transmit;
 extern time_t recvTime;
 
 int32_t NTPUDP(uint8_t sn);
-void wzn_event_handle();
-void ntpserverdefaultconfig();
-int32_t ntpserverprocess();
+void wzn_event_handle(void);
+void ntpserverdefaultconfig(void);
+int32_t ntpserverprocess(void);
