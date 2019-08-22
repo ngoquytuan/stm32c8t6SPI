@@ -83,7 +83,7 @@ void Timer_Configuration(void)
 	//tim uptade frequency = TIM_CLK/(TIM_PSC+1)/(TIM_ARR + 1)
 	//TIM_CLK/(TIM_Period + 1) /(Prescaler+1)
   /* Time base configuration */
-  TIM_TimeBaseStructure.TIM_Period = 1000;// count 10000 tick then interrupt, gia tri max cua bo dem
+  TIM_TimeBaseStructure.TIM_Period = 999;// count 10000 tick then interrupt, gia tri max cua bo dem
   TIM_TimeBaseStructure.TIM_Prescaler = 0;
   TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;

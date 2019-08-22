@@ -2,7 +2,7 @@
 
 extern time_t timenow;
 //for NTP server
-time_t unixTime_last_sync = 1559640302;// lan chuan gio gan nhat 
+time_t unixTime_last_sync;// = 1564500000;// lan chuan gio gan nhat 1564551507
 /* SNTP Packet array */
 uint8_t serverPacket[NTP_PACKET_SIZE] = {0};
 uint8_t clientPacket[NTP_PACKET_RAWSIZE] = {0};
@@ -40,10 +40,10 @@ int32_t NTPUDP(uint8_t sn)
 					{
 						//in ra ban tin
 						
-						//for(i=0;i<48;i++)
-						//{
-						  // printf("%x ",*(clientPacket+i));
-						//}
+						/*for(i=0;i<48;i++)
+						{
+						   printf("%x ",*(clientPacket+i));
+						}*/
 						
 						//Tao ban tin NTP
 						//ntpserverdefaultconfig();
@@ -55,8 +55,7 @@ int32_t NTPUDP(uint8_t sn)
 						serverPacket[12] = 'G';
 						serverPacket[13] = 'P';
 						serverPacket[14] = 'S';
-						//[Reference Timestamp]: unsigned 32-bit seconds value : Lan lay chuan gan nhat la bao gio
-						memcpy(&serverPacket[16], &unixTime_last_sync, 4);
+
 						
 					serverPacket[0]=0x24;	// Leap 0x0, Version 0x3, Mode 0x4
 				  serverPacket[1]=0x03;	// Stratum 0x1, stratum (GPS)
@@ -80,18 +79,13 @@ int32_t NTPUDP(uint8_t sn)
 					serverPacket[13]=0x50;	// Reference ID, "P"
 					serverPacket[14]=0x53;	// Reference ID, "S"
 					serverPacket[15]=0x00;	// Reference ID, 0x00
-					//Reference Timestamp : e1 6 3a 76 77 3a 48 cf
-					serverPacket[16]=0xE1;
-					serverPacket[17]=0x06;
-					serverPacket[18]=0x3A;
-					serverPacket[19]=0x76;
-					
-					serverPacket[20]=0x77;
-					serverPacket[21]=0x3A;
-					serverPacket[22]=0x48;
-					serverPacket[23]=0xCF;
+
 						*/
 					}
+					
+					unixTime_last_sync = (timenow + STARTOFTIME);//gio luc tryen ban tin
+					unixTime_last_sync = htonl(unixTime_last_sync);// gio luc truyen
+					memcpy(&serverPacket[16], &unixTime_last_sync, 4);
 					
 
 					
@@ -163,19 +157,23 @@ void ntpserverdefaultconfig(void)
 		serverPacket[12] = 'G';
 		serverPacket[13] = 'P';
 		serverPacket[14] = 'S';
-		//[Reference Timestamp]: unsigned 32-bit seconds value : Lan lay chuan gan nhat la bao gio
-		//memcpy(&serverPacket[16], &unixTime_last_sync, 4);
-	
-	//Reference Timestamp : e1 6 3a 76 77 3a 48 cf
-					serverPacket[16]=0xE1;
-					serverPacket[17]=0x06;
-					serverPacket[18]=0x3A;
-					serverPacket[19]=0x76;
+		//[Reference Timestamp]: unsigned 32-bit seconds value : Lan lay chuan gan nhat la bao gio	
+	//ex: Reference Timestamp : e1 6 3a 76 77 3a 48 cf
+	/*				
+	serverPacket[16]=0xE1;
+	serverPacket[17]=0x06;
+	serverPacket[18]=0x3A;
+	serverPacket[19]=0x76;
+	//Phan le				
+	serverPacket[20]=0;
+	serverPacket[21]=0;
+	serverPacket[22]=0;
+	serverPacket[23]=0;
+					*/
 					
-					serverPacket[20]=0;
-					serverPacket[21]=0;
-					serverPacket[22]=0;
-					serverPacket[23]=0;
+	unixTime_last_sync = (timenow + STARTOFTIME);//gio luc tryen ban tin
+	unixTime_last_sync = htonl(unixTime_last_sync);// gio luc truyen
+	memcpy(&serverPacket[16], &unixTime_last_sync, 4);
 }
 /********************************************************************************************************************/
 void wzn_event_handle(void)
